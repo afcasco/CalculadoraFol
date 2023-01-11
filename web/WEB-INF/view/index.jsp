@@ -13,7 +13,8 @@
 </head>
 <body>
 <h2>Calculadora conceptes nòmina:</h2>
-<h3><a href="${pageContext.request.contextPath}/newPayroll">Introduir dàdes</a>  </h3>
+<h3><a href="${pageContext.request.contextPath}/newPayroll">Conceptes nomina</a>  </h3>
+<h3><a href="${pageContext.request.contextPath}/newSeverance">Indemnització acomiadament</a>  </h3>
 
 </body>
 </html>
