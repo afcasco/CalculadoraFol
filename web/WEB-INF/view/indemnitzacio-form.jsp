@@ -14,7 +14,7 @@
 <h2>Case data:</h2>
 <br>
 
-<form:form action="severanceAdded" modelAttribute="severance">
+<form:form action="severanceAdded" modelAttribute="indemnitzacio">
 
     Salari mensual: <form:input path="salariMensual"/>
     <br><br>
@@ -22,13 +22,13 @@
     <br><br>
     Dies per any a cobrar segons tipus acomiadament: <form:input path="dies"/>
     <br><br>
-    Antiguitat: <form:input path="antiguitat"/>
+    Antiguitat (en mesos): <form:input path="antiguitat"/>
     <br><br>
     Limit mesos indemnització: <form:input path="limit"/>
     <br><br>
     <input style="border-radius: 5px" type="submit" value="Submit"/>
     <br><br>
 </form:form>
-
+<a href="${pageContext.request.contextPath}/">Torna al principi</a>
 </body>
 </html>

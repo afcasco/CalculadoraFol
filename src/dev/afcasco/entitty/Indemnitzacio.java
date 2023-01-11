@@ -93,7 +93,7 @@ public class Severance {
         salariAnual = salariMensual * 12 + importPagaExtra * 2;
         salariDia = salariAnual / 365;
 
-        indemnitzacio = dies * antiguitat * salariDia;
+        indemnitzacio = dies * (antiguitat/12.0) * salariDia;
 
         indemnitzacioMax = salariAnual * (limit / 12.0);
 

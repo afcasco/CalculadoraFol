@@ -27,6 +27,6 @@ Maxim mesos indemnització: ${severance.limit}
 </ul>
 
 <br>
-
+<a href="${pageContext.request.contextPath}/">Torna al principi</a>
 </body>
 </html>

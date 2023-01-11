@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class PayController {
 
-    @RequestMapping("newPayroll")
+    @RequestMapping("/newPayroll")
     public String payrollForm(Model model){
         Payroll payroll = new Payroll();
         model.addAttribute("pay",payroll);
