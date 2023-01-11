@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="NominaCalc archive">
+    <output-path>$PROJECT_DIR$/out/artifacts/NominaCalc_archive</output-path>
+    <root id="archive" name="NominaCalc archive.war">
+      <element id="artifact" artifact-name="NominaCalc" />
+    </root>
+  </artifact>
+</component>

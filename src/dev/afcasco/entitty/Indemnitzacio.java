@@ -1,6 +1,8 @@
 package dev.afcasco.entitty;
 
-public class Severance {
+import java.text.DecimalFormat;
+
+public class Indemnitzacio {
 
     private double salariMensual;
     private double importPagaExtra;
@@ -12,6 +14,8 @@ public class Severance {
     private double indemnitzacio;
     private double indemnitzacioMax;
 
+    public Indemnitzacio() {
+    }
 
     public int getAntiguitat() {
         return antiguitat;
@@ -53,9 +57,6 @@ public class Severance {
         this.indemnitzacioMax = indemnitzacioMax;
     }
 
-    public Severance() {
-    }
-
     public double getSalariMensual() {
         return salariMensual;
     }
@@ -92,13 +93,16 @@ public class Severance {
     public void calculate() {
         salariAnual = salariMensual * 12 + importPagaExtra * 2;
         salariDia = salariAnual / 365;
-
-        indemnitzacio = dies * (antiguitat/12.0) * salariDia;
-
+        indemnitzacio = dies * (antiguitat / 12.0) * salariDia;
         indemnitzacioMax = salariAnual * (limit / 12.0);
+
+        DecimalFormat df = new DecimalFormat("0.00");
+        indemnitzacio = Double.parseDouble(df.format(indemnitzacio));
 
         if (indemnitzacio > indemnitzacioMax) {
             indemnitzacio = indemnitzacioMax;
         }
+
+
     }
 }

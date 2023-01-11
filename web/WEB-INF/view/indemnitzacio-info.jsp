@@ -7,22 +7,19 @@
 <h3>Dades introduides:</h3>
 <hr>
 <br>
-Salari mensual: ${severance.salariMensual}
+Salari mensual: ${indemnitzacio.salariMensual}
 <br>
-Import paga extra: ${severance.importPagaExtra}
+Import paga extra: ${indemnitzacio.importPagaExtra}
 <br>
-Dies per any a cobrar: ${severance.dies}
+Dies per any a cobrar: ${indemnitzacio.dies}
 <br>
-Maxim mesos indemnització: ${severance.limit}
+Maxim mesos indemnització: ${indemnitzacio.limit}
 <br>
 
 <h3>Resultats:</h3>
 <hr>
 <ul>
-    <li>Indemnització -
-        <br>Indemnització total:
-        <br><b>${severance.indemnitzacio}</b>
-        <br><br>
+    <li>Indemnització: <b>${indemnitzacio.indemnitzacio} €</b>
     </li>
 </ul>
 

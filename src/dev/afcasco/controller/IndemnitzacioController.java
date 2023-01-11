@@ -1,4 +1,4 @@
-package dev.afcasco.controllor;
+package dev.afcasco.controller;
 
 import dev.afcasco.entitty.Indemnitzacio;
 import org.springframework.stereotype.Controller;

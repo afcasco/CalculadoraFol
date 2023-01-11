@@ -1,4 +1,4 @@
-package dev.afcasco.controllor;
+package dev.afcasco.controller;
 
 import dev.afcasco.entitty.Payroll;
 import org.springframework.stereotype.Controller;

@@ -1,5 +1,7 @@
 package dev.afcasco.entitty;
 
+import java.text.DecimalFormat;
+
 public class Payroll {
 
     private double salariBase;
@@ -194,5 +196,24 @@ public class Payroll {
         retencioIrpf=BIRF*(irpf/100);
         totalDeduir=quotaContingenciesComunes+quotaAtur+quotaFP+retencioIrpf+quotaHoresExtra;
         totalPercebre=totalMeritat-totalDeduir;
+        this.roundDecimals();
+    }
+
+
+
+    public void roundDecimals(){
+        DecimalFormat df = new DecimalFormat("#.##");
+        totalMeritat = Double.parseDouble(df.format(totalMeritat));
+        BCC = Double.parseDouble(df.format(BCC));
+        BCP = Double.parseDouble(df.format(BCP));
+        BHE = Double.parseDouble(df.format(BHE));
+        BIRF = Double.parseDouble(df.format(BIRF));
+        quotaContingenciesComunes = Double.parseDouble(df.format(quotaContingenciesComunes));
+        quotaAtur = Double.parseDouble(df.format(quotaAtur));
+        quotaFP = Double.parseDouble(df.format(quotaFP));
+        quotaHoresExtra = Double.parseDouble(df.format(quotaHoresExtra));
+        retencioIrpf = Double.parseDouble(df.format(retencioIrpf));
+        totalDeduir = Double.parseDouble(df.format(totalDeduir));
+        totalPercebre=Double.parseDouble(df.format(totalPercebre));
     }
 }
