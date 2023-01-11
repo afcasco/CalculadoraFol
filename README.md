@@ -3,6 +3,14 @@
 spring-mvc app per calcular alguns conceptes de la nómina per l'assignatura de FOL
 de l'IOC.
 
-Inclou Dockerfile per deploy amb tomcat 0.9.7 i jdk11-temurin.
+Afegit el càlcul d'imports d'indemnitzacoions per acomiadament.
 
-Actualment a: https://fol.afcasco.dev
+Inclou Dockerfile amb imatge base tomcat 0.9.7 i jdk11-temurin.
+
+Imatge docker publica:
+
+https://hub.docker.com/repository/docker/afcasco/fol-nomina/general
+
+Actualment a: 
+
+https://fol.afcasco.dev
