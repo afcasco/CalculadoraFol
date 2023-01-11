@@ -5,7 +5,7 @@
     <title>FOL - Indemnització</title>
     <style>
         .errors {
-            color: red;
+
             font-style: italic;
         }
     </style>
