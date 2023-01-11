@@ -1,4 +1,4 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <title>Resultat</title>
@@ -16,8 +16,12 @@ Salari base: ${quitanza.salariBase}
 <ul>
 
     <li>Salari mensual - ${quitanza.salariBase} + ${quitanza.complement} = ${quitanza.salariMenusal} €</li>
-    <li>Salari diari (retribucions mensuals) - (${quitanza.salariMenusal} * 12) / 365 = ${quitanza.salariDiariRM} € / dia</li>
-    <li>Salari diari (càlcul indemnització) - (${quitanza.salariMenusal} * 14) / 365 = ${quitanza.salariDiariCI} € / dia</li>
+    <li>Salari diari (retribucions mensuals) - (${quitanza.salariMenusal} * 12) / 365 = ${quitanza.salariDiariRM} € /
+        dia
+    </li>
+    <li>Salari diari (càlcul indemnització) - (${quitanza.salariMenusal} * 14) / 365 = ${quitanza.salariDiariCI} € /
+        dia
+    </li>
     <li>Dies treballats per a la paga de desembre - ${quitanza.diesTreballatsPagaDesembre} dies</li>
     <li>Dies treballats per a la paga de juny - ${quitanza.diesTreballatsPagaJuny} dies</li>
     <li>Dies treballats mes actual- ${quitanza.diesTreballatsMesEnCurs} dies</li>

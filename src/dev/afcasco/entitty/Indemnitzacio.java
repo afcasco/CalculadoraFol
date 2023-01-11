@@ -2,6 +2,7 @@ package dev.afcasco.entitty;
 
 import java.text.DecimalFormat;
 
+@SuppressWarnings("unused")
 public class Indemnitzacio {
 
     private double salariMensual;

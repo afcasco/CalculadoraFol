@@ -1,7 +1,7 @@
 package dev.afcasco.entitty;
 
 import java.text.DecimalFormat;
-
+@SuppressWarnings("unused")
 public class Quitzanza {
 
     private double salariBase;
@@ -19,7 +19,6 @@ public class Quitzanza {
     private double salariMenusal;
     private double salariDiariRM;
     private double salariDiariCI;
-
 
 
     public Quitzanza() {
@@ -138,7 +137,7 @@ public class Quitzanza {
     }
 
     public void calculate() {
-        salariMenusal = salariBase +complement;
+        salariMenusal = salariBase + complement;
         importPagaDesembre = ((salariBase + complement) * diesTreballatsPagaDesembre) / 365;
         importPagaJuny = ((salariBase + complement) * diesTreballatsPagaJuny) / 365;
         salariDiariRM = (salariBase + complement) / 30;
@@ -146,14 +145,12 @@ public class Quitzanza {
         importVacancesNoGaudit = salariDiariRM * totalDies;
 
 
-        salariDiariCI = ((salariBase+complement)*12)/365;
-        salariMesEnCurs =salariDiariCI*diesTreballatsMesEnCurs;
+        salariDiariCI = ((salariBase + complement) * 12) / 365;
+        salariMesEnCurs = salariDiariCI * diesTreballatsMesEnCurs;
 
 
         resultat = salariMesEnCurs + importPagaDesembre + importPagaJuny + importVacancesNoGaudit;
         DecimalFormat df = new DecimalFormat("#.##");
         resultat = Double.parseDouble(df.format(resultat));
-        System.out.println(this);
-
     }
 }

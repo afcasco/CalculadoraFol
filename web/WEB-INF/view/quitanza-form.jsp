@@ -5,10 +5,6 @@
 <head>
     <title>FOL - Quitança</title>
     <style>
-        .errors {
-            color: red;
-            font-style: italic;
-        }
     </style>
 </head>
 <body>
@@ -17,7 +13,7 @@
 
 <form:form action="quitanzaAdded" modelAttribute="quitanza">
 
-    Salari base: <form:input  path="salariBase"/>
+    Salari base: <form:input path="salariBase"/>
     <br><br>
     Complement: <form:input path="complement"/>
     <br><br>

@@ -1,6 +1,5 @@
 package dev.afcasco.controller;
 
-import dev.afcasco.entitty.Payroll;
 import dev.afcasco.entitty.Quitzanza;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

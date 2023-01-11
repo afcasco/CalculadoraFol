@@ -5,10 +5,6 @@
 <head>
     <title>FOL - Nomina</title>
     <style>
-        .errors {
-            color: red;
-            font-style: italic;
-        }
     </style>
 </head>
 <body>

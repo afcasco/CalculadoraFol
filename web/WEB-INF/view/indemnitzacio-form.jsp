@@ -4,10 +4,6 @@
 <head>
     <title>FOL - Indemnització</title>
     <style>
-        .errors {
-
-            font-style: unset;
-        }
     </style>
 </head>
 <body>
@@ -21,12 +17,13 @@
     <li>Acomiadament disciplinari: no te dret a indemnització.</li>
     <li>Acomiadament col·lectiu: 20 dies per any treballat. Max 12 mensualitats.</li>
     <li>Acomiadament improcedent: 33 dies per any treballat. Max 24 mensualitats.</li>
-    <li>Acomiadament procedent: la que correspongui segons s'estableixi si es acomiadament disciplinari o col·lectiu.</li>
+    <li>Acomiadament procedent: la que correspongui segons s'estableixi si es acomiadament disciplinari o col·lectiu.
+    </li>
 </ul>
 <br>
 <form:form action="indemnitzacioAdded" modelAttribute="indemnitzacio">
 
-    Salari mensual: <form:input path="salariMensual" />
+    Salari mensual: <form:input path="salariMensual"/>
     <br><br>
     Import paga extra: <form:input path="importPagaExtra"/>
     <br><br>
