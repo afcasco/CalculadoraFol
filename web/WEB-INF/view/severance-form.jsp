@@ -6,7 +6,7 @@
     <style>
         .errors {
 
-            font-style: italic;
+            font-style: unset;
         }
     </style>
 </head>
