@@ -15,6 +15,6 @@ Imatge docker publica:
 
 https://hub.docker.com/r/afcasco/fol-nomina
 
-Actualment a: 
+Deployed:
 
 https://fol.afcasco.dev
