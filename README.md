@@ -9,7 +9,7 @@ Inclou Dockerfile amb imatge base tomcat 0.9.7 i jdk11-temurin.
 
 Imatge docker publica:
 
-https://hub.docker.com/repository/docker/afcasco/fol-nomina/general
+https://hub.docker.com/r/afcasco/fol-nomina
 
 Actualment a: 
 
