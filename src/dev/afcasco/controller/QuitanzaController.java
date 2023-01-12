@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 public class QuitanzaController {
-    @RequestMapping("/newQuitanza")
+    @RequestMapping("newQuitanza")
     public String payrollForm(Model model){
         Quitzanza quitzanza = new Quitzanza();
         model.addAttribute("quitanza",quitzanza);
