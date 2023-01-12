@@ -5,6 +5,10 @@ de l'IOC.
 
 Afegit el càlcul d'imports d'indemnitzacoions per acomiadament.
 
+Afegit càlcul de "la quitança" .
+
+Afegit càlcul import i durada prestacions d'atur.
+
 Inclou Dockerfile amb imatge base tomcat 0.9.7 i jdk11-temurin.
 
 Imatge docker publica:
