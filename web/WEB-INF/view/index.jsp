@@ -21,6 +21,8 @@
     </li>
     <li><h3><a href="${pageContext.request.contextPath}/newQuitanza">La quitança</a></h3></li>
     <li><h3><a href="${pageContext.request.contextPath}/newPrestacio">Prestació atur</a></h3></li>
+    <li><h3><a href="${pageContext.request.contextPath}/newNaixement">Prestació paternitat</a></h3></li>
+    <li><h3><a href="${pageContext.request.contextPath}/newIncapacitat">Prestació incapacitat/malaltia</a></h3></li>
 </ul>
 </body>
 </html>
