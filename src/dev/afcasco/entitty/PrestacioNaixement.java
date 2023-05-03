@@ -29,12 +29,18 @@ public class PrestacioNaixement {
 
     public double calculate() {
         DecimalFormat df = new DecimalFormat("#.##");
-        double salariDiari = BCC/30;
+        double salariDiari = BCC / 30;
         double prestacioTotal;
-        if(numeroNascuts>1){
+        /*if(numeroNascuts>1){
             prestacioTotal = salariDiari*17*7;
         } else {
             prestacioTotal = salariDiari*16*7;
+        }*/
+
+        if (numeroNascuts == 1) {
+            prestacioTotal = salariDiari * 7 * 16;
+        } else {
+            prestacioTotal = salariDiari * 7 * (16 + numeroNascuts);
         }
 
         return Double.parseDouble(df.format(prestacioTotal));

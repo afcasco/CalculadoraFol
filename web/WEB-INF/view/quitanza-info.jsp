@@ -35,6 +35,6 @@ Salari base: ${quitanza.salariBase}
 </ul>
 
 <br>
-<a href="${pageContext.request.contextPath}/">Torna al principi</a>
+<a class="back" href="${pageContext.request.contextPath}/">Torna al principi</a>
 </body>
 </html>

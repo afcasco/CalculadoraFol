@@ -1,7 +1,13 @@
 package dev.afcasco.entitty;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import java.text.DecimalFormat;
-@SuppressWarnings("unused")
+import java.time.LocalDate;
+
+import java.time.temporal.ChronoUnit;
+
+
 public class Quitzanza {
 
     private double salariBase;
@@ -15,6 +21,28 @@ public class Quitzanza {
     private double importVacancesNoGaudit;
     private double salariMesEnCurs;
     private double resultat;
+
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private LocalDate start;
+
+    @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+    private LocalDate end;
+
+    public LocalDate getStart() {
+        return start;
+    }
+
+    public void setStart(LocalDate start) {
+        this.start = start;
+    }
+
+    public LocalDate getEnd() {
+        return end;
+    }
+
+    public void setEnd(LocalDate end) {
+        this.end = end;
+    }
 
     private double salariMenusal;
     private double salariDiariRM;
@@ -138,7 +166,21 @@ public class Quitzanza {
 
     public void calculate() {
         salariMenusal = salariBase + complement;
+
+        LocalDate iniciAny = LocalDate.of(end.getYear(),1,1);
+        diesTreballatsPagaDesembre = (int) ChronoUnit.DAYS.between(iniciAny,end) +1;
         importPagaDesembre = ((salariBase + complement) * diesTreballatsPagaDesembre) / 365;
+
+        // TODO calcul dies paga juny
+        LocalDate aComptarPagaJuny;
+        if(end.getMonth().getValue() >= 7){
+            aComptarPagaJuny = LocalDate.of(end.getYear(),7,1);
+        } else {
+            aComptarPagaJuny = LocalDate.of(end.getYear()-1,7,1);
+        }
+        diesTreballatsPagaJuny = (int) ChronoUnit.DAYS.between(aComptarPagaJuny,end) +1;
+
+
         importPagaJuny = ((salariBase + complement) * diesTreballatsPagaJuny) / 365;
         salariDiariRM = (salariBase + complement) / 30;
         double totalDies = (diesTreballatsPagaDesembre * 30.0) / 365;
@@ -146,11 +188,18 @@ public class Quitzanza {
 
 
         salariDiariCI = ((salariBase + complement) * 12) / 365;
+
+        LocalDate iniciMesEnCurs = LocalDate.of(end.getYear(), end.getMonth(), 1);
+        diesTreballatsMesEnCurs = (int) ChronoUnit.DAYS.between(iniciMesEnCurs,end) +1;
         salariMesEnCurs = salariDiariCI * diesTreballatsMesEnCurs;
 
 
         resultat = salariMesEnCurs + importPagaDesembre + importPagaJuny + importVacancesNoGaudit;
         DecimalFormat df = new DecimalFormat("#.##");
         resultat = Double.parseDouble(df.format(resultat));
+
+
+
+
     }
 }

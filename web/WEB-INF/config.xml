@@ -13,7 +13,7 @@
 	<context:component-scan base-package="dev.afcasco" />
 
 	<mvc:annotation-driven/>
-	<mvc:resources mapping="resources/images/*" location="/WEB-INF/view/resources/images" />
+	<mvc:resources mapping="/resources/**" location="/resources/"/>
 
 
 

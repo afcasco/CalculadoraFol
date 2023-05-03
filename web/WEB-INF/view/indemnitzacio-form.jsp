@@ -3,39 +3,53 @@
 <html>
 <head>
     <title>FOL - Indemnització</title>
-    <style>
-    </style>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style.css">
 </head>
 <body>
-<h2>Case data:</h2>
-<br>
+<div class="main">
 
-<h3>Tipus d'indemnitzacions:</h3>
+    <h2>Case data:</h2>
+    <div class="columns">
+        <div>
 
-<ul>
-    <li>Acomiadament objectiu: 20 dies per any treballat. Max 12 mensualitats.</li>
-    <li>Acomiadament disciplinari: no te dret a indemnització.</li>
-    <li>Acomiadament col·lectiu: 20 dies per any treballat. Max 12 mensualitats.</li>
-    <li>Acomiadament improcedent: 33 dies per any treballat. Max 24 mensualitats.</li>
-    <li>Acomiadament procedent: la que correspongui segons s'estableixi si es acomiadament disciplinari o col·lectiu.
-    </li>
-</ul>
-<br>
-<form:form action="indemnitzacioAdded" modelAttribute="indemnitzacio">
+            <h3>Tipus d'indemnitzacions:</h3>
 
-    Salari mensual: <form:input path="salariMensual"/>
-    <br><br>
-    Import paga extra: <form:input path="importPagaExtra"/>
-    <br><br>
-    Dies per any a cobrar segons tipus acomiadament: <form:input path="dies"/>
-    <br><br>
-    Antiguitat (en mesos): <form:input path="antiguitat"/>
-    <br><br>
-    Limit mesos indemnització: <form:input path="limit"/>
-    <br><br>
-    <input style="border-radius: 5px" type="submit" value="Submit"/>
-    <br><br>
-</form:form>
-<a href="${pageContext.request.contextPath}/">Torna al principi</a>
+            <ul>
+                <li>Acomiadament objectiu: 20 dies per any treballat. Max 12 mensualitats.</li>
+                <li>Acomiadament disciplinari: no te dret a indemnització.</li>
+                <li>Acomiadament col·lectiu: 20 dies per any treballat. Max 12 mensualitats.</li>
+                <li>Acomiadament improcedent: 33 dies per any treballat. Max 24 mensualitats.</li>
+                <li>Acomiadament procedent: la que correspongui segons s'estableixi si es acomiadament disciplinari o
+                    col·lectiu.
+                </li>
+            </ul>
+        </div>
+        <div>
+            <form:form action="indemnitzacioAdded" modelAttribute="indemnitzacio">
+
+            <div class="formElement">
+                Salari mensual: <form:input path="salariMensual"/>
+            </div>
+            <div class="formElement">
+                Import paga extra: <form:input path="importPagaExtra"/>
+            </div>
+            <div class="formElement">
+                Dies per any a cobrar segons tipus acomiadament: <form:input path="dies"/>
+            </div>
+            <div class="formElement">
+                Antiguitat (en mesos): <form:input path="antiguitat"/>
+            </div>
+            <div class="formElement">
+                Limit mesos indemnització: <form:input path="limit"/>
+            </div>
+            <div class="formElement">
+            </div>
+            <input class="submit" type="submit" value="Submit"/>
+        </div>
+        </form:form>
+    </div>
+    <a class="back" href="${pageContext.request.contextPath}/">Torna al principi</a>
+
+</div>
 </body>
 </html>

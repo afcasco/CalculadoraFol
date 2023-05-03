@@ -4,6 +4,7 @@
     <title>Resultat</title>
 </head>
 <body>
+<div>
 <h3>Dades introduides:</h3>
 <hr>
 <br>
@@ -96,8 +97,8 @@ Contracte indefinit: ${payroll.indefinit}
 </ul>
 
 <br>
-
-<a href="${pageContext.request.contextPath}/">Torna al principi</a>
+</div>
+<a  style="background-color: #5197ff; width: fit-content; padding: 10px; border-radius: 10px; border: solid black 1px; font-weight: bold; color: white" href="${pageContext.request.contextPath}/">Torna al principi</a>
 
 </body>
 </html>

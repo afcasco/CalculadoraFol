@@ -22,6 +22,6 @@
 </ul>
 
 <br>
-<a href="${pageContext.request.contextPath}/">Torna al principi</a>
+<a  style="background-color: #5197ff; width: fit-content; padding: 10px; border-radius: 10px; border: solid black 1px; font-weight: bold; color: white" href="${pageContext.request.contextPath}/">Torna al principi</a>
 </body>
 </html>

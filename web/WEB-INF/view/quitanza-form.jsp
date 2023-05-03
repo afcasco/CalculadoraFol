@@ -4,30 +4,34 @@
 <html>
 <head>
     <title>FOL - Quitança</title>
-    <style>
-    </style>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style.css">
 </head>
 <body>
-<h2>Dades treballador:</h2>
-<br>
+<div class="main">
+    <h2>Dades treballador:</h2>
+    <br>
 
-<form:form action="quitanzaAdded" modelAttribute="quitanza">
+    <form:form action="quitanzaAdded" modelAttribute="quitanza">
 
-    Salari base: <form:input path="salariBase"/>
-    <br><br>
-    Complement: <form:input path="complement"/>
-    <br><br>
-    Dies treballats any en curs (paga desembre): <form:input path="diesTreballatsPagaDesembre"/>
-    <br><br>
-    Dies treballats des de 1 de juliol d'any anterior (paga juny): <form:input path="diesTreballatsPagaJuny"/>
-    <br><br>
-    Dies treballats mes en curs: <form:input path="diesTreballatsMesEnCurs"/>
-    <br><br>
-    <input style="border-radius: 5px" type="submit" value="Submit"/>
-    <br><br>
-</form:form>
+        <div class="formElement">
+            Salari base: <form:input   cssStyle="text-align: right; width: 121px" path="salariBase"/>
+        </div>
+        <div class="formElement">
+            Complement: <form:input cssStyle="text-align: right; width: 121px" path="complement"/>
+        </div>
+        <div class="formElement">
+            Data inici contracte: <form:input type="date"  path="start"/>
+        </div>
+        <div class="formElement">
+            Data fi contracte: <form:input type="date" path="end"/>
+        </div>
+        <div class="formElement">
+            <input class="submit" type="submit" value="Submit"/>
+        </div>
 
-<a href="${pageContext.request.contextPath}/">Torna al principi</a>
+    </form:form>
 
+    <a class="back" href="${pageContext.request.contextPath}/">Torna al principi</a>
+</div>
 </body>
 </html>

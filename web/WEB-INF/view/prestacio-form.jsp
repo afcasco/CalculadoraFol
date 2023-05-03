@@ -4,37 +4,44 @@
 <html>
 <head>
     <title>FOL - Prestació</title>
-    <style>
-    </style>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style.css">
 </head>
 <body>
-<h2>Dades contracte:</h2>
-<br>
+<div class="main">
+    <h2>Dades contracte:</h2>
+    <br>
 
-<form:form action="prestacioAdded" modelAttribute="builder">
+    <form:form action="prestacioAdded" modelAttribute="builder">
 
-    Data alta seguretat social: <form:input type="date" path="start"/>
-    <br><br>
-    Data baixa seguretat social: <form:input type="date" path="end"/>
-    <br><br>
-    BCP darrers 6 mesos (excloses hores extra): <form:input path="bcp"/>
-    <br><br>
-    Grup de cotització: <form:input path="grupCotitzacio"/>
-    <br><br>
-    Edat: <form:input path="edat"/>
-    <br><br>
-    IPREM: <form:input path="iprem"/>
-    <br><br>
-    Te fills: <form:select path="teFills">
-    <form:option value="si"/>
-    <form:option value="no"/>
-    </form:select>
-    <br><br>
-    <input style="border-radius: 5px" type="submit" value="Submit"/>
-    <br><br>
-</form:form>
+        <div class="formElement">
+            Data alta seguretat social: <form:input type="date" path="start"/>
+        </div>
+        <div class="formElement">
+            Data baixa seguretat social: <form:input type="date" path="end"/>
+        </div>
+        <div class="formElement">
+            BCP darrers 6 mesos (excloses hores extra): <form:input path="bcp"/>
+        </div>
+        <div class="formElement">
+            Grup de cotització: <form:input path="grupCotitzacio"/>
+        </div>
+        <div class="formElement">
+            Edat: <form:input path="edat"/>
+        </div>
+        <div class="formElement">
+            IPREM: <form:input path="iprem"/>
+        </div>
+        <div class="formElement">
+            Te fills: <form:select path="teFills">
+            <form:option value="si"/>
+            <form:option value="no"/>
+        </form:select>
 
-<a href="${pageContext.request.contextPath}/">Torna al principi</a>
+            <input class="submit" type="submit" value="Submit"/>
+        </div>
+    </form:form>
 
+    <a class="back" href="${pageContext.request.contextPath}/">Torna al principi</a>
+</div>
 </body>
 </html>

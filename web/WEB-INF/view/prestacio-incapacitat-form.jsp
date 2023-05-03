@@ -4,30 +4,34 @@
 <html>
 <head>
     <title>FOL - Prestació</title>
-    <style>
-    </style>
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/style.css">
 </head>
 <body>
-<h2>Dades contracte:</h2>
-<br>
+<div class="main">
+    <h2>Dades contracte:</h2>
+    <br>
 
-<form:form action="incapacitatAdded" modelAttribute="incapacitat">
+    <form:form action="incapacitatAdded" modelAttribute="incapacitat">
 
-    Base cotització contingencies comunes: <form:input path="BCC"/>
-    <br><br>
-    Base cotització contingencies professionals: <form:input path="BCP"/>
-    <br><br>
-    Hores extres mes: <form:input path="extresMes"/>
-    <br><br>
-    Hores extres últims 12 mesos: <form:input path="extresUltimAny"/>
-    <br><br>
-    Duració baixa: <form:input path="duracio"/>
-    <br><br>
-    <input style="border-radius: 5px" type="submit" value="Submit"/>
-    <br><br>
-</form:form>
+        <div class="formElement">
+            Base cotització contingencies comunes: <form:input path="BCC"/>
+        </div>
+        <div class="formElement">
+            Base cotització contingencies professionals: <form:input path="BCP"/>
+        </div>
+        <div class="formElement">
+            Hores extres mes: <form:input path="extresMes"/>
+        </div>
+        <div class="formElement">
+            Hores extres últims 12 mesos: <form:input path="extresUltimAny"/>
+        </div>
+        <div class="formElement">
+            Duració baixa: <form:input path="duracio"/>
+        </div>
+        <input class="submit" type="submit" value="Submit"/>
+    </form:form>
 
-<a href="${pageContext.request.contextPath}/">Torna al principi</a>
-
+    <a class="back" href="${pageContext.request.contextPath}/">Torna al principi</a>
+</div>
 </body>
 </html>
