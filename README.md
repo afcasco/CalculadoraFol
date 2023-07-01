@@ -1,5 +1,5 @@
 # NominaCalc
-## spring-mvc app per calcular alguns conceptes de la nómina per l'assignatura de FOL de l'IOC.
+## Spring-mvc app per calcular alguns conceptes de la nómina per l'assignatura de FOL de l'IOC.
 <hr>
 
 Afegit el càlcul d'imports d'indemnitzacoions per acomiadament.
